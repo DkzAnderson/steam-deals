@@ -13,10 +13,14 @@ interface Deal {
   thumb: string;
 }
 
+/*
+
+Revisar
 interface ApiResponse {
   deals: Deal[];
 }
 
+*/
 export function useDeals() {
   const [deals, setDeals] = useState<Deal[]>([]);
   const [loading, setLoading] = useState<boolean>(true);

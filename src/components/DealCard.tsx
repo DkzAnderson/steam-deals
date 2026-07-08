@@ -56,14 +56,14 @@ export function DealCard({
 
           {isOnSale ? (
             <span
-              className={`text-xs font-bold px-2 py-1 rounded-full ${getDiscountBadgeClasses(
+              className={`text-md font-bold p-1 rounded-lg ${getDiscountBadgeClasses(
                 discountPercent
               )}`}
             >
               -{discountPercent}%
             </span>
           ) : (
-            <span className="bg-gray-600 text-gray-300 text-xs font-medium px-2 py-1 rounded-full">
+            <span className="bg-gray-600 text-gray-300 text-md font-medium px-2 py-1 rounded-lg">
               Sin oferta
             </span>
           )}
