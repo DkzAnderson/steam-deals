@@ -40,7 +40,7 @@ function AppContent() {
       <div className="max-w-[1800px] mx-auto flex flex-col ">
         <header className="flex flex-col md:flex-row justify-between items-center gap-3 mb-8">
           <h1 className="text-3xl font-bold text-gray-200">
-            🔥 Ofertas de Steam
+            🔥 Ofertas de Steam v: 
           </h1>
           <div className="grid sm:flex grid-rows-2 grid-cols-2 items-center gap-3">
             <span className='flex'>
