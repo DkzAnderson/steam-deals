@@ -36,18 +36,20 @@ function AppContent() {
   }, [isSearching]);
 
   return (
-    <div className="min-h-screen bg-black p-6">
-      <div className="max-w-7xl mx-auto">
-        <header className="flex flex-wrap justify-between items-center gap-3 mb-8">
+    <div className="flex min-h-screen bg-black p-6 max-h-dvh">
+      <div className="max-w-[1800px] mx-auto flex flex-col ">
+        <header className="flex flex-col md:flex-row justify-between items-center gap-3 mb-8">
           <h1 className="text-3xl font-bold text-gray-200">
             🔥 Ofertas de Steam
           </h1>
-          <div className="flex items-center gap-3">
-            <ViewToggle viewMode={viewMode} onChange={setViewMode} />
+          <div className="grid sm:flex grid-rows-2 grid-cols-2 items-center gap-3">
+            <span className='flex'>
+              <ViewToggle viewMode={viewMode} onChange={setViewMode} />
+            </span>
             <CurrencySelector />
             <button
               onClick={refetch}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="col-span-2 sm:col-span-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               disabled={dealsLoading}
             >
               {dealsLoading ? 'Cargando...' : 'Recargar'}

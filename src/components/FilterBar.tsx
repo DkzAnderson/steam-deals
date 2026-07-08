@@ -20,9 +20,9 @@ export function FilterBar({ filters, onChange }: FilterBarProps) {
   };
 
   return (
-    <div className="w-full bg-gray-900 border border-gray-800 shadow-sm rounded-xl p-4 mb-6 flex flex-col md:flex-row md:items-end gap-4">
+    <div className="w-full bg-gray-900 border border-gray-800 shadow-sm rounded-xl px-4 p-4 mb-6 grid grid-cols-2 sm:grid-cols-3 grid-rows-3 sm:grid-rows-2 md:grid-cols-4 lg:grid-cols-5 gap-2">
       {/* Búsqueda por título */}
-      <div className="flex flex-col flex-1 min-w-[200px]">
+      <div className="col-span-2 lg:col-span-5 flex flex-col flex-1">
         <label className="text-sm font-medium text-gray-400 mb-1">
           Buscar por título
         </label>
@@ -36,7 +36,7 @@ export function FilterBar({ filters, onChange }: FilterBarProps) {
       </div>
 
       {/* Precio mínimo */}
-      <div className="flex flex-col w-full md:w-32">
+      <div className="flex flex-col w-full ">
         <label className="text-sm font-medium text-gray-400 mb-1">
           Precio mín.
         </label>
@@ -56,7 +56,7 @@ export function FilterBar({ filters, onChange }: FilterBarProps) {
       </div>
 
       {/* Precio máximo */}
-      <div className="flex flex-col w-full md:w-32">
+      <div className="flex flex-col w-full ">
         <label className="text-sm font-medium text-gray-400 mb-1">
           Precio máx.
         </label>
@@ -76,14 +76,14 @@ export function FilterBar({ filters, onChange }: FilterBarProps) {
       </div>
 
       {/* Ordenar por */}
-      <div className="flex flex-col w-full md:w-64">
+      <div className="flex flex-col w-full">
         <label className="text-sm font-medium text-gray-400 mb-1">
           Ordenar por
         </label>
         <select
           value={filters.sortBy}
           onChange={(e) => update({ sortBy: e.target.value as SortOption })}
-          className="bg-gray-800 border border-gray-700 text-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+          className="  bg-gray-800 border border-gray-700 text-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
         >
           {sortOptions.map((opt) => (
             <option key={opt.value} value={opt.value}>
@@ -100,7 +100,7 @@ export function FilterBar({ filters, onChange }: FilterBarProps) {
             ...defaultFiltersKeepSort(filters),
           })
         }
-        className="text-sm text-gray-400 hover:text-red-400 underline whitespace-nowrap"
+        className="transition-all duration-500 h-10 rounded-lg self-end bg-gray-800 hover:bg-cyan-600 hover:text-black font-bold text-sm text-gray-400  whitespace-nowrap lg:col-start-5 cursor-pointer"
       >
         Limpiar filtros
       </button>

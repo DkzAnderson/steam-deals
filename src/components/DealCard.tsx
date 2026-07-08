@@ -26,7 +26,7 @@ export function DealCard({
   const imageUrl = `https://steamcdn-a.akamaihd.net/steam/apps/${steamAppID}/header.jpg`;
 
   return (
-    <div className="bg-cyan-300/50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+    <div className="bg-cyan-300/50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col min-h-62">
       <ImageWithFallback
         src={imageUrl}
         alt={title}

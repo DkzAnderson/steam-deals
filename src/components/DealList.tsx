@@ -15,7 +15,7 @@ export function DealList({ deals, viewMode }: DealListProps) {
 
   if (viewMode === 'grid') {
     return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="overflow-y-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
         {deals.map((deal) => (
           <DealCard key={deal.dealID} {...deal} />
         ))}
